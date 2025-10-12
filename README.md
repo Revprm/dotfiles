@@ -38,7 +38,7 @@ chmod +x scripts/install.sh
 ### Manual Install
 
 ```bash
-
+# Create backup
 ./scripts/backup.sh
 
 # Create symlinks
