@@ -27,7 +27,7 @@ Make sure you have HyDE installed. If not, install it first:
 
 ```bash
 # Clone this repository
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+git clone https://github.com/revprm/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
 # Run installation script
