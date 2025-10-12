@@ -1,6 +1,6 @@
-# HyDE Dotfiles
+# Dotfiles
 
-My personal dotfiles for HyDE (Hyprland Desktop Environment)
+My personal dotfiles for My Arch + Hyprland Setup
 
 ## 🖥️ Setup Info
 
@@ -20,7 +20,7 @@ My personal dotfiles for HyDE (Hyprland Desktop Environment)
 Make sure you have HyDE installed. If not, install it first:
 ```bash
 # Install HyDE
-# Follow instructions from: https://github.com/prasanthrangan/hyprdots
+# Follow instructions from: https://github.com/HyDE-Project/HyDE
 ```
 
 ### Quick Install
@@ -38,7 +38,7 @@ chmod +x scripts/install.sh
 ### Manual Install
 
 ```bash
-# Backup your current configs
+
 ./scripts/backup.sh
 
 # Create symlinks
@@ -65,11 +65,17 @@ dotfiles/
 
 ## 📸 Screenshots
 
-Add your screenshots here!
+![display](images/251012_07h34m09s_screenshot.png)
+
+![terminal](images/251012_07h38m12s_screenshot.png)
+
+![rofi](images/251012_07h39m21s_screenshot.png)
+
+![spotify](images/251012_07h40m45s_screenshot.png)
 
 ## 🙏 Credits
 
-- [HyDE](https://github.com/prasanthrangan/hyprdots) by Prasanth Rangan
+- [HyDE](https://github.com/HyDE-Project/HyDE)
 - [Hyprland](https://hyprland.org/)
 
 ## 📝 License
