@@ -1,0 +1,54 @@
+# Cache and temporary files
+**/.cache/
+**/cache/
+**/*.log
+**/*.tmp
+**/*.swp
+**/*.swo
+*~
+
+# Personal/sensitive data
+.config/gh/
+.config/Code/User/globalStorage/
+.config/obs-studio/plugin_config/
+**/*password*
+**/*token*
+**/*secret*
+**/*credentials*
+
+# Application specific
+.config/dconf/
+.config/pulse/
+.config/obsidian/
+.config/qBittorrent/
+.config/spotify/
+.config/spicetify/
+.local/share/Steam/
+.local/share/Trash/
+.local/share/recently-used.xbel
+.local/share/osu/
+.local/share/fonts/
+.local/share/flatpak/
+.local/share/GNS3/
+.local/share/qBittorrent/
+.local/share/vulkan/
+.local/share/ZapZap/
+.local/share/user-places.xbel*
+.local/share/baloo/
+
+# System specific
+.config/systemd/
+.local/state/
+
+# Build artifacts
+**/__pycache__/
+**/*.pyc
+**/node_modules/
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
