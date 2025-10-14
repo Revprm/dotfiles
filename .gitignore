@@ -52,3 +52,6 @@
 # OS files
 .DS_Store
 Thumbs.db
+
+./config/zsh/.zcompdump*
+./config/zsh/.zsh_history
