@@ -65,7 +65,7 @@ dotfiles/
 
 ## 📸 Screenshots
 
-![display](images/251012_16h03m58s_screenshot.png)
+![display](images/251014_19h18m12s_screenshot.png)
 
 ![terminal](images/251012_07h38m12s_screenshot.png)
 
