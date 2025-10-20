@@ -4,7 +4,7 @@
 GTK_THEME="Wallbash-Gtk"
 ICON_THEME="Wallbash-Icon"
 COLOR_SCHEME="prefer-dark"
-CURSOR_THEME="Gruvbox-Retro"
+CURSOR_THEME="One-Dark"
 CURSOR_SIZE=18
 TERMINAL="kitty"
 FONT="Cantarell"
