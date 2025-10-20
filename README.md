@@ -65,13 +65,14 @@ dotfiles/
 
 ## 📸 Screenshots
 
-![display](images/251014_19h18m12s_screenshot.png)
+![tiling](images/251020_12h30m19s_screenshot.png)
 
-![terminal](images/251012_07h38m12s_screenshot.png)
+![discord](images/251020_12h30m57s_screenshot.png)
 
-![rofi](images/251012_07h39m21s_screenshot.png)
+![rofi](images/251020_12h31m14s_screenshot.png)
 
-![spotify](images/251012_07h40m45s_screenshot.png)
+![lock](images/251020_12h31m58s_screenshot.png)
+
 
 ## 🙏 Credits
 
