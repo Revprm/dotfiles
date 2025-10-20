@@ -45,18 +45,18 @@ create_link() {
     local source="$1"
     local target="$2"
     local name="$3"
-
+    
     if [ -e "$target" ] && [ ! -L "$target" ]; then
         if [ -n "$BACKUP_DIR" ]; then
             mv "$target" "$BACKUP_DIR/$(basename "$target")"
             echo -e "${YELLOW}↻${NC} Backed up $name"
         fi
     fi
-
+    
     if [ -L "$target" ]; then
         rm "$target"
     fi
-
+    
     mkdir -p "$(dirname "$target")"
     ln -sf "$source" "$target"
     echo -e "${GREEN}✓${NC} Linked $name"
@@ -69,6 +69,10 @@ echo -e "${BLUE}Linking .config directories...${NC}"
 for dir in "$DOTFILES_DIR/.config"/*; do
     [ -d "$dir" ] || continue
     dirname=$(basename "$dir")
+    # Skip vesktop and spicetify - they're handled specially
+    if [ "$dirname" = "vesktop" ]; then
+        continue
+    fi
     create_link "$dir" "$HOME/.config/$dirname" ".config/$dirname"
 done
 
@@ -100,7 +104,16 @@ if [ -d "$DOTFILES_DIR/.local/share" ]; then
     done
 fi
 
-# ---------------------------------------------- #
+# ---------- SPECIAL CONFIGS: vesktop themes ---------- #
+echo -e "\n${BLUE}Linking special application configs...${NC}"
+
+# Vesktop themes only (not the entire vesktop config)
+if [ -d "$DOTFILES_DIR/.config/vesktop/themes" ]; then
+    mkdir -p "$HOME/.config/vesktop"
+    create_link "$DOTFILES_DIR/.config/vesktop/themes" "$HOME/.config/vesktop/themes" "vesktop/themes"
+fi
+
+# -------------------------------------------------------------- #
 
 echo -e "\n${GREEN}✓ All symlinks created successfully!${NC}"
 
