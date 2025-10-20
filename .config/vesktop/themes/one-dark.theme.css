@@ -1,0 +1,272 @@
+/**
+ * @name One Dark TUI
+ * @description A tui-like discord theme with the One Dark color palette and sharp, terminal-like styling.
+ * @author Human
+ * @version 2.0.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/theme/system24.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+body {
+    /* font, change to '' for default discord font */
+    --font: 'JetBrains Mono'; /* monospace font for TUI feel */
+    --code-font: 'JetBrains Mono'; /* monospace code font */
+    font-weight: 400; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
+    letter-spacing: 0ch; /* standard spacing for monospace fonts */
+
+    /* sizes */
+    --gap: 16px; /* increased spacing between panels for better TUI readability */
+    --divider-thickness: 1px; /* thin dividers for terminal aesthetic */
+    --border-thickness: 1px; /* thin borders for TUI style */
+    --border-hover-transition: 0.1s ease; /* fast transitions for terminal feel */
+
+    /* padding options for TUI comfort */
+    --panel-padding: 20px; /* increased padding inside panels */
+    --message-padding: 12px; /* increased padding around messages */
+    --channel-padding: 10px; /* increased padding for channel items */
+    --button-padding: 12px 16px; /* increased padding for buttons */
+    --input-padding: 12px; /* increased padding for input fields */
+
+    /* animation/transition options */
+    --animations: off; /* disable animations for TUI feel */
+    --list-item-transition: 0.1s ease; /* minimal transitions */
+    --dms-icon-svg-transition: 0.1s ease; /* fast icon transitions */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* minimal top bar height */
+    --top-bar-button-position: titlebar; /* move buttons to titlebar for clean look */
+    --top-bar-title-position: left; /* left align title like terminal */
+    --subtle-top-bar-title: on; /* subtle title for terminal aesthetic */
+
+    /* window controls */
+    --custom-window-controls: off; /* use default window controls */
+    --window-control-size: 14px; /* standard size */
+
+    /* dms button options */
+    --custom-dms-icon: off; /* use default discord icon */
+    --dms-icon-svg-url: url(''); /* no custom icon */
+    --dms-icon-svg-size: 90%; /* standard size */
+    --dms-icon-color-before: var(--icon-secondary); /* muted icon color */
+    --dms-icon-color-after: var(--white); /* bright when active */
+    --custom-dms-background: off; /* no custom background */
+    --dms-background-image-url: url(''); /* no background image */
+    --dms-background-image-size: cover; /* standard size */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fallback gradient */
+
+    /* background image options */
+    --background-image: off; /* no background image for clean TUI look */
+    --background-image-url: url(''); /* no background image */
+
+    /* transparency/blur options */
+    --transparency-tweaks: off; /* no transparency tweaks */
+    --remove-bg-layer: off; /* keep background layer */
+    --panel-blur: off; /* no blur for sharp TUI aesthetic */
+    --blur-amount: 0px; /* no blur */
+    --bg-floating: var(--bg-3); /* solid floating backgrounds */
+
+    /* other options */
+    --small-user-panel: on; /* compact user panel for TUI */
+
+    /* unrounding options */
+    --unrounding: on; /* remove rounded corners for TUI */
+    --roundness: 0px; /* no rounded corners */
+
+    /* styling options */
+    --custom-spotify-bar: on; /* text-like spotify bar */
+    --ascii-titles: on; /* ascii titles for terminal aesthetic */
+    --ascii-loader: system24; /* terminal-style loader */
+
+    /* panel labels */
+    --panel-labels: on; /* show panel labels for TUI */
+    --label-color: var(--text-muted); /* muted label color */
+    --label-font-weight: 400; /* normal weight labels */
+}
+
+/* color options */
+:root {
+    --colors: on; /* enable One Dark custom colors */
+
+    /* text colors using One Dark palette */
+    --text-0: #282c34; /* text on colored elements (dark bg) */
+    --text-1: #abb2bf; /* primary text (One Dark foreground) */
+    --text-2: #abb2bf; /* headings and important text */
+    --text-3: #abb2bf; /* normal text */
+    --text-4: #5c6370; /* icon buttons and channels (One Dark gray) */
+    --text-5: #5c6370; /* muted channels/chats and timestamps */
+
+    /* background and dark colors using One Dark */
+    --bg-1: #3e4451; /* lightest background (One Dark lightest) */
+    --bg-2: #353b45; /* secondary background (One Dark lighter) */
+    --bg-3: #353b45; /* spacing, secondary elements */
+    --bg-4: #282c34; /* main background color (One Dark primary) */
+    --hover: rgba(86, 182, 194, 0.15); /* channels and buttons when hovered (One Dark cyan) */
+    --active: rgba(86, 182, 194, 0.25); /* channels and buttons when clicked or selected */
+    --active-2: rgba(86, 182, 194, 0.35); /* extra state for transparent buttons */
+    --message-hover: var(--hover); /* messages when hovered */
+
+    /* accent colors using One Dark palette */
+    --accent-1: #61afef; /* links and other accent text (One Dark blue) */
+    --accent-2: #56b6c2; /* small accent elements (One Dark cyan) */
+    --accent-3: #56b6c2; /* accent buttons */
+    --accent-4: #61afef; /* accent buttons when hovered */
+    --accent-5: #c678dd; /* accent buttons when clicked (One Dark magenta) */
+    --accent-new: #e06c75; /* error/warning elements (One Dark red) */
+    --mention: linear-gradient(to right, rgba(97, 175, 239, 0.15) 40%, transparent); /* mention background */
+    --mention-hover: linear-gradient(to right, rgba(97, 175, 239, 0.25) 40%, transparent); /* mention hover */
+    --reply: linear-gradient(to right, rgba(86, 182, 194, 0.15) 40%, transparent); /* reply background */
+    --reply-hover: linear-gradient(to right, rgba(86, 182, 194, 0.25) 40%, transparent); /* reply hover */
+
+    /* status indicator colors using One Dark */
+    --online: #98c379; /* One Dark green */
+    --dnd: #e06c75; /* One Dark red */
+    --idle: #d19a66; /* One Dark yellow */
+    --streaming: #c678dd; /* One Dark magenta */
+    --offline: #5c6370; /* One Dark gray */
+
+    /* border colors */
+    --border-light: var(--hover); /* light border using hover color */
+    --border: var(--active); /* normal border using active color */
+    --border-hover: var(--accent-2); /* border when hovered (One Dark cyan) */
+    --button-border: rgba(92, 99, 112, 0.3); /* neutral border using One Dark gray */
+
+    /* base colors using One Dark palette */
+    --red-1: #e06c75;
+    --red-2: #be5046;
+    --red-3: #e06c75;
+
+    --green-1: #98c379;
+    --green-2: #98c379;
+
+    --blue-1: #61afef;
+    --blue-2: #56b6c2;
+
+    --yellow-1: #d19a66;
+    --yellow-2: #d19a66;
+
+    --purple-1: #c678dd;
+    --purple-2: #c678dd;
+}
+
+/* ==========================================
+   TUI PADDING CUSTOMIZATIONS
+   ========================================== */
+
+/* Apply padding to main panels */
+.sidebar-CFHs9e,
+.container-2O0kY- {
+    padding: var(--panel-padding) !important;
+}
+
+/* Server list with extra padding from borders */
+.sidebar-1tnWFu {
+    padding: calc(var(--panel-padding) * 1.5) !important;
+}
+
+/* Message padding */
+.message-2CShn3 {
+    padding: var(--message-padding) !important;
+    margin: 8px 0 !important;
+}
+
+/* Channel item padding */
+.wrapper-1BJsBx,
+.link-1-6fOZ {
+    padding: var(--channel-padding) !important;
+    margin: 4px 8px !important;
+}
+
+/* Button padding */
+.button-38aScr,
+.lookFilled-1Gx00P,
+.lookOutlined-3sRXeN {
+    padding: var(--button-padding) !important;
+    margin: 4px !important;
+}
+
+/* Input field padding */
+.input-125oad,
+.inputDefault-3FGxgL,
+.scrollableContainer-15eg7h {
+    padding: var(--input-padding) !important;
+}
+
+/* Chat input area padding */
+.form-2GNHod {
+    padding: var(--panel-padding) !important;
+}
+
+/* User panel padding */
+.container-1zzFcN {
+    padding: var(--panel-padding) !important;
+}
+
+/* Member list padding */
+.members-3WRCEx {
+    padding: var(--panel-padding) !important;
+}
+
+/* Settings sidebar padding */
+.side-8zPYf6 .item-3XjbnG {
+    padding: var(--channel-padding) var(--panel-padding) !important;
+    margin: 2px 4px !important;
+}
+
+/* Modal content padding */
+.content-1SgpWY,
+.modalContent-OBD2xK {
+    padding: calc(var(--panel-padding) * 1.5) !important;
+}
+
+/* Context menu padding */
+.menu-1dO2mV {
+    padding: 12px !important;
+}
+
+.item-1cS5YX {
+    padding: var(--channel-padding) var(--panel-padding) !important;
+    margin: 2px 0 !important;
+}
+
+/* Embed padding */
+.embed-hKpSrO {
+    padding: var(--panel-padding) !important;
+    margin: 12px 0 !important;
+}
+
+/* Reaction padding */
+.reaction-1L29zO {
+    padding: 6px 12px !important;
+    margin: 4px !important;
+}
+
+/* Mention spacing and padding */
+.mention {
+    padding: 2px 4px !important;
+    margin: 0 2px !important;
+    border-radius: 3px !important;
+}
+
+/* User mention spacing */
+.wrapper-1ZcZW- {
+    margin: 0 2px !important;
+    padding: 1px 3px !important;
+}
+
+/* Channel mention spacing */
+.mention-1f5kbO {
+    margin: 0 2px !important;
+    padding: 1px 4px !important;
+}
+
+/* Role mention spacing */
+.roleMention-11n0C0 {
+    margin: 0 2px !important;
+    padding: 1px 4px !important;
+}
