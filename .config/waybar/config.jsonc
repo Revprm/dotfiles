@@ -18,7 +18,7 @@
   },
   "group/pill#left2": {
     "orientation": "inherit",
-    "modules": ["idle_inhibitor", "clock"]
+    "modules": ["custom/dunst", "idle_inhibitor", "clock"]
   },
   "modules-center": ["group/pill#center"],
   "group/pill#center": {
