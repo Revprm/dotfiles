@@ -36,7 +36,7 @@
   "modules-right": ["group/pill#right1", "group/pill#right2"],
   "group/pill#right1": {
     "orientation": "inherit",
-    "modules": ["privacy", "tray"]
+    "modules": ["privacy", "tray", "custom/dunst"]
   },
   "group/pill#right2": {
     "orientation": "inherit",
