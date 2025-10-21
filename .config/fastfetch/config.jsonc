@@ -6,7 +6,7 @@
     "height": 13,
     "width": 26,
     "padding": {
-      "top": 10,
+      "top": 5,
       "left": 3
     }
   },
@@ -14,128 +14,125 @@
     "separator": " ➜ "
   },
   "modules": [
-    "break",
-    "break",
-    "break",
     {
       "type": "title",
-      "key": "╭─",
+      "key": "╭──────────────  ",
       "keyColor": "cyan",
       "format": "{user-name}@{host-name}"
     },
     "break",
     {
       "type": "os",
-      "key": "│ OS ",
+      "key": "│   OS",
       "keyColor": "31"
     },
     {
       "type": "kernel",
-      "key": "│ ├  ",
+      "key": "│ ├   Kernel",
       "keyColor": "31"
     },
     {
       "type": "packages",
-      "format": "{} (pacman){?3} [{3}]{?}",
-      "key": "│ ├ 󰏖 ",
-      "keyColor": "31"
+      "key": "│ ├   Packages",
+      "keyColor": "31",
+      "format": "{} (pacman){?3} [{3}]{?}"
     },
     {
       "type": "shell",
-      "key": "│ └  ",
+      "key": "│ └   Shell",
       "keyColor": "31"
     },
     "break",
     {
       "type": "wm",
-      "key": "│ WM ",
+      "key": "│ 󰖯  WM",
       "keyColor": "32"
     },
     {
       "type": "wmtheme",
-      "key": "│ ├ 󰉼 ",
+      "key": "│ ├ 󰉼  Theme",
       "keyColor": "32"
     },
     {
       "type": "icons",
-      "key": "│ ├ 󰀻 ",
+      "key": "│ ├ 󰀻  Icons",
       "keyColor": "32"
     },
     {
       "type": "cursor",
-      "key": "│ ├  ",
+      "key": "│ ├ 󰍽  Cursor",
       "keyColor": "32"
     },
     {
       "type": "terminal",
-      "key": "│ ├  ",
+      "key": "│ ├ 󰆍  Terminal",
       "keyColor": "32"
     },
     {
       "type": "terminalfont",
-      "key": "│ └  ",
+      "key": "│ └ 󰛖  Font",
       "keyColor": "32"
     },
     "break",
     {
       "type": "host",
-      "format": "{5} {1} Type {2}",
-      "key": "│ PC ",
-      "keyColor": "33"
+      "key": "│   Host",
+      "keyColor": "33",
+      "format": "{5} {1} Type {2}"
     },
     {
       "type": "cpu",
-      "format": "{1} ({3}) @ {7} GHz",
-      "key": "│ ├  ",
-      "keyColor": "33"
+      "key": "│ ├   CPU",
+      "keyColor": "33",
+      "format": "{1} ({3}) @ {7} GHz"
     },
     {
       "type": "gpu",
-      "format": "{1} {2}",
-      "key": "│ ├ 󰢮 ",
-      "keyColor": "33"
+      "key": "│ ├ 󰍛  GPU",
+      "keyColor": "33",
+      "format": "{1} {2}"
     },
     {
       "type": "memory",
-      "key": "│ ├  ",
+      "key": "│ ├ 󰘚  RAM",
       "keyColor": "33"
     },
     {
       "type": "swap",
-      "key": "│ ├ 󰓡 ",
+      "key": "│ ├ 󰓡  Swap",
       "keyColor": "33"
     },
     {
       "type": "disk",
-      "key": "│ ├ 󰋊 ",
+      "key": "│ ├ 󰋊  Disk",
       "keyColor": "33"
     },
     {
       "type": "battery",
-      "key": "│ ├  ",
+      "key": "│ ├ 󰁹  Battery",
       "keyColor": "33"
     },
     {
       "type": "monitor",
-      "key": "│ └  ",
+      "key": "│ └ 󰍹  Monitor",
       "keyColor": "33"
     },
     "break",
     {
       "type": "uptime",
-      "key": "│  ",
+      "key": "│ 󰔚  Uptime",
       "keyColor": "35"
     },
     {
       "type": "localip",
-      "key": "│  ",
+      "key": "│ 󰖟  Network",
       "keyColor": "35",
       "format": "{ipv4} ({ifname})"
     },
     "break",
     {
       "type": "colors",
-      "key": "╰─",
+      "key": "╰────────────── ",
       "paddingLeft": 1,
       "symbol": "circle"
     },
