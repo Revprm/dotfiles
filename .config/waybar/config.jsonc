@@ -3,7 +3,7 @@
   // sourced from header module //
   "layer": "top",
   "output": ["*"],
-  "height": 10,
+  "height": 5,
   "exclusive": true,
   "passthrough": false,
   "reload_style_on_change": true,
