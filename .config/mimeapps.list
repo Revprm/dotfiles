@@ -1,8 +1,15 @@
 [Added Associations]
+application/x-osu-skin-archive=osu-wine.desktop;
 text/plain=code.desktop;
 
 [Default Applications]
+application/x-osu-skin-archive=osu-wine.desktop;
 inode/directory=org.kde.dolphin.desktop
 text/plain=code.desktop;
-x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
 x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop

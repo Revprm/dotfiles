@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # Add user configurations here
@@ -46,6 +46,7 @@ fi
 # Add your configurations here
 # export EDITOR=nvim
 export EDITOR=code
+export BROWSER=firefox
 
 # unset -f command_not_found_handler # Uncomment to prevent searching for commands not found in package manager
 
