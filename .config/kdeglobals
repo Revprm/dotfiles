@@ -10,6 +10,9 @@ Theme=One-Dark
 [KDE]
 widgetStyle=kvantum
 
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
 [UiSettings]
 ColorScheme=colors
 
