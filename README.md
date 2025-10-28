@@ -60,7 +60,7 @@ dotfiles/
 
 - Edit Hyprland config: `.config/hypr/`
 - Change theme: Use HyDE theme selector or edit `.config/hyde/`
-- Modify Waybar: `.config/waybar/`
+- Modify Waybar: `.local/share/waybar/`
 - Terminal colors: `.config/kitty/`
 
 ## 📸 Screenshots
