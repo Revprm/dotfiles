@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # tlp-auto-switch.sh — hybrid TLP mode switcher (gaming + temperature-based)
-# Improved version with better error handling and stability
+# Improved version with aggressive battery power saving
 
 CONFIG="/etc/tlp.conf"
 BACKUP="/etc/tlp.conf.bak"
@@ -11,9 +11,9 @@ LOCKFILE="/var/run/tlp-auto-switch.lock"
 
 # --- Configuration ---
 CPU_LIMIT_HIGH=75      # °C — performance mode above this
-CPU_LIMIT_LOW=60       # °C — back to balanced below this (wider hysteresis)
+CPU_LIMIT_LOW=65       # °C — back to balanced below this (wider hysteresis)
 GPU_LIMIT_HIGH=75
-GPU_LIMIT_LOW=60
+GPU_LIMIT_LOW=65
 CHECK_INTERVAL=20      # seconds between checks
 GAMING_COOLDOWN=60     # seconds to stay in performance after gaming stops
 
@@ -122,13 +122,23 @@ set_mode() {
         performance)
             sudo sed -i \
                 -e 's/^CPU_SCALING_GOVERNOR_ON_AC=.*/CPU_SCALING_GOVERNOR_ON_AC="performance"/' \
-                -e 's/^CPU_SCALING_GOVERNOR_ON_BAT=.*/CPU_SCALING_GOVERNOR_ON_BAT="performance"/' \
+                -e 's/^CPU_SCALING_GOVERNOR_ON_BAT=.*/CPU_SCALING_GOVERNOR_ON_BAT="powersave"/' \
                 -e 's/^CPU_BOOST_ON_AC=.*/CPU_BOOST_ON_AC=1/' \
-                -e 's/^CPU_BOOST_ON_BAT=.*/CPU_BOOST_ON_BAT=1/' \
+                -e 's/^CPU_BOOST_ON_BAT=.*/CPU_BOOST_ON_BAT=0/' \
                 -e 's/^CPU_HWP_DYN_BOOST_ON_AC=.*/CPU_HWP_DYN_BOOST_ON_AC=1/' \
-                -e 's/^CPU_HWP_DYN_BOOST_ON_BAT=.*/CPU_HWP_DYN_BOOST_ON_BAT=1/' \
+                -e 's/^CPU_HWP_DYN_BOOST_ON_BAT=.*/CPU_HWP_DYN_BOOST_ON_BAT=0/' \
                 -e 's/^PLATFORM_PROFILE_ON_AC=.*/PLATFORM_PROFILE_ON_AC="performance"/' \
-                -e 's/^PLATFORM_PROFILE_ON_BAT=.*/PLATFORM_PROFILE_ON_BAT="performance"/' \
+                -e 's/^PLATFORM_PROFILE_ON_BAT=.*/PLATFORM_PROFILE_ON_BAT="low-power"/' \
+                -e 's/^CPU_ENERGY_PERF_POLICY_ON_AC=.*/CPU_ENERGY_PERF_POLICY_ON_AC="performance"/' \
+                -e 's/^CPU_ENERGY_PERF_POLICY_ON_BAT=.*/CPU_ENERGY_PERF_POLICY_ON_BAT="power"/' \
+                -e 's/^CPU_MIN_PERF_ON_AC=.*/CPU_MIN_PERF_ON_AC=0/' \
+                -e 's/^CPU_MAX_PERF_ON_AC=.*/CPU_MAX_PERF_ON_AC=95/' \
+                -e 's/^CPU_MIN_PERF_ON_BAT=.*/CPU_MIN_PERF_ON_BAT=0/' \
+                -e 's/^CPU_MAX_PERF_ON_BAT=.*/CPU_MAX_PERF_ON_BAT=85/' \
+                -e 's/^RADEON_DPM_PERF_LEVEL_ON_AC=.*/RADEON_DPM_PERF_LEVEL_ON_AC="auto"/' \
+                -e 's/^RADEON_DPM_PERF_LEVEL_ON_BAT=.*/RADEON_DPM_PERF_LEVEL_ON_BAT="low"/' \
+                -e 's/^RADEON_POWER_PROFILE_ON_AC=.*/RADEON_POWER_PROFILE_ON_AC="high"/' \
+                -e 's/^RADEON_POWER_PROFILE_ON_BAT=.*/RADEON_POWER_PROFILE_ON_BAT="low"/' \
                 "$tmp_config"
             ;;
         balanced)
@@ -141,6 +151,16 @@ set_mode() {
                 -e 's/^CPU_HWP_DYN_BOOST_ON_BAT=.*/CPU_HWP_DYN_BOOST_ON_BAT=0/' \
                 -e 's/^PLATFORM_PROFILE_ON_AC=.*/PLATFORM_PROFILE_ON_AC="balanced"/' \
                 -e 's/^PLATFORM_PROFILE_ON_BAT=.*/PLATFORM_PROFILE_ON_BAT="low-power"/' \
+                -e 's/^CPU_ENERGY_PERF_POLICY_ON_AC=.*/CPU_ENERGY_PERF_POLICY_ON_AC="balance_performance"/' \
+                -e 's/^CPU_ENERGY_PERF_POLICY_ON_BAT=.*/CPU_ENERGY_PERF_POLICY_ON_BAT="power"/' \
+                -e 's/^CPU_MIN_PERF_ON_AC=.*/CPU_MIN_PERF_ON_AC=0/' \
+                -e 's/^CPU_MAX_PERF_ON_AC=.*/CPU_MAX_PERF_ON_AC=95/' \
+                -e 's/^CPU_MIN_PERF_ON_BAT=.*/CPU_MIN_PERF_ON_BAT=0/' \
+                -e 's/^CPU_MAX_PERF_ON_BAT=.*/CPU_MAX_PERF_ON_BAT=85/' \
+                -e 's/^RADEON_DPM_PERF_LEVEL_ON_AC=.*/RADEON_DPM_PERF_LEVEL_ON_AC="auto"/' \
+                -e 's/^RADEON_DPM_PERF_LEVEL_ON_BAT=.*/RADEON_DPM_PERF_LEVEL_ON_BAT="low"/' \
+                -e 's/^RADEON_POWER_PROFILE_ON_AC=.*/RADEON_POWER_PROFILE_ON_AC="default"/' \
+                -e 's/^RADEON_POWER_PROFILE_ON_BAT=.*/RADEON_POWER_PROFILE_ON_BAT="low"/' \
                 "$tmp_config"
             ;;
     esac
