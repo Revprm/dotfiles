@@ -12,5 +12,5 @@
 #pill-up,
 #pill-in,
 #pill-out {
-    border: 0.5px solid @wb-act-bg;
+    border: 1.5px solid @wb-act-bg;
 }
