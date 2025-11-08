@@ -1,32 +1,44 @@
-// I don't use this module, but it is useful for reference
-// I can't make it work lol.
-
 {
+  "mpd": {
+    // CORE CONFIG
+    "interval": 2,
+    "unknown-tag": "N/A",
+    "max-length": 40,
 
-"mpd": {
-	"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist}- {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-	"format-disconnected": "Disconnected ",
-	"format-stopped": "{consumeIcon} {randomIcon} {repeatIcon} {singleIcon} Stopped ",
-	"interval": 2,
-	"consume-icons": {
-		"on": " " // Icon shows only when "consume" is on
-	},
-	"random-icons": {
-		// "off": "<span color="#f53c3c"></span> ", // Icon grayed out when "random" is off
-		"on": " "
-	},
-	"repeat-icons": {
-		"on": " "
-	},
-	"single-icons": {
-		"on": "1 "
-	},
-	"state-icons": {
-		"paused": "",
-		"playing": ""
-	},
-	"tooltip-format": "MPD (connected)",
-	"tooltip-format-disconnected": "MPD (disconnected)"
-}
+    // INTERACTIVITY
+    "on-click": "mpc toggle",
+    "on-scroll-up": "mpc next",
+    "on-scroll-down": "mpc prev",
+    // REPLACE 'kitty' WITH YOUR ACTUAL TERMINAL
+    "on-click-right": "kitty -e rmpc",
 
+    // FORMATTING
+    "format": "{stateIcon} {artist} - {title}  {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
+    "format-disconnected": "Disconnected ",
+    "format-paused": "{stateIcon} {artist} - {title} ",
+    "format-stopped": "{stateIcon} Stopped ",
+
+    // ICONS
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "consume-icons": {
+      "on": " "
+    },
+    "random-icons": {
+      "off": "<span color=\"#6e6a86\"></span> ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+
+    // TOOLTIP (Fixed to remove MPD references)
+    "tooltip-format": "<b>RMPC</b>\n{artist} - {album}\n({elapsedTime:%M:%S} / {totalTime:%M:%S})\n\nUp next: {nextArtist} - {nextTitle}",
+    "tooltip-format-disconnected": "RMPC (disconnected)"
+  }
 }
