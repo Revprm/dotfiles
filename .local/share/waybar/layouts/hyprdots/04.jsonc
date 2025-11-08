@@ -19,7 +19,7 @@
   },
   "group/pill#left2": {
     "orientation": "inherit",
-    "modules": ["custom/dunst", "idle_inhibitor", "clock", "custom/spotify"]
+    "modules": ["custom/dunst", "idle_inhibitor", "clock", "mpd"]
   },
   "modules-center": ["group/pill#center"],
   "group/pill#center": {
