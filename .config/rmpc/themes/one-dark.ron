@@ -23,7 +23,6 @@
             ),
             (
                 pane: Pane(ProgressBar),
-                // Increased size from "1" to "3" to add vertical space
                 size: "1",
             ),
         ],
@@ -80,10 +79,25 @@
                     )
                 ],
                 center: [
-                    (kind: Property(Status(State)), style: (fg: "#c678dd", modifiers: "Bold"))
+                    (kind: Property(Status(State)), style: (fg: "#c678dd", modifiers: "Bold")),
+                    (kind: Text("   ")),
+                    
+                    // Repeat Icon
+                    (kind: Text(" "), style: (fg: "#98c379")),
+                    (kind: Property(Status(Repeat)), style: (modifiers: "Bold")),
+                    (kind: Text("   ")),
+                    
+                    // Random Icon
+                    (kind: Text(" "), style: (fg: "#e5c07b")),
+                    (kind: Property(Status(Random)), style: (modifiers: "Bold")),
+                    (kind: Text("   ")),
+                    
+                    // Consume Icon
+                    (kind: Text(" "), style: (fg: "#e06c75")),
+                    (kind: Property(Status(Consume)), style: (modifiers: "Bold")),
                 ],
                 right: [
-                    (kind: Text("Vol: "), style: (fg: "#61afef", modifiers: "Bold")),
+                    (kind: Text(" "), style: (fg: "#61afef")),
                     (kind: Property(Status(Volume)), style: (fg: "#98c379", modifiers: "Bold")),
                     (kind: Text("% "), style: (fg: "#61afef", modifiers: "Bold"))
                 ]
@@ -98,6 +112,7 @@
                      (kind: Property(Song(Album)), style: (fg: "#56b6c2"), default: (kind: Text("Unknown")))
                 ],
                 right: [
+                    (kind: Text(" "), style: (fg: "#abb2bf")),
                     (kind: Property(Status(Elapsed)), style: (fg: "#98c379")),
                     (kind: Text(" / "), style: (fg: "#5c6370")),
                     (kind: Property(Status(Duration)), style: (fg: "#abb2bf"))
