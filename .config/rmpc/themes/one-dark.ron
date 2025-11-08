@@ -168,7 +168,7 @@
                                             (kind: Property(Status(RandomV2(on_label: "", off_label: "",
                                                             on_style: (fg: "#c678dd"), off_style: (fg: "#5c6370"))))),
                                             (kind: Text(" "),style: (fg: "#61afef", modifiers: "Bold")),
-                                            (kind: Property(Status(ConsumeV2(on_label: "󰮯", off_label: "󰮯", oneshot_label: "󰮯󰇊",
+                                            (kind: Property(Status(ConsumeV2(on_label: "󰮯", off_label: "󰮯", oneshot_label: "󰮯 󰇊",
                                                     on_style: (fg: "#e06c75"), off_style: (fg: "#5c6370"))))),
                                             (kind: Text(" "),style: (fg: "#61afef", modifiers: "Bold")),
                                             (kind: Property(Status(SingleV2(on_label: "󰎤", off_label: "󰎦", oneshot_label: "󰇊", off_oneshot_label: "󱅊",

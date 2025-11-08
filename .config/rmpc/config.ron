@@ -125,18 +125,12 @@
     ),
     tabs: [
         (name: "Home", pane: Split(direction: Horizontal, panes: [
-                    (size: "70%", borders: "NONE", pane: Split(direction: Vertical,panes: [
-                                (size: "3", borders: "ALL", pane: Component("custom_song_table_header")),
-                                (size: "100%", borders: "ALL", pane: Pane(Queue)),
-                            ])
-                    ),
-                    (size: "30%", borders: "NONE", pane: Split(direction: Vertical, panes: [
-                                (size: "0.45r", borders: "ALL", pane: Pane(AlbumArt)),
-                                (size: "100%", borders: "NONE", pane: Pane(Lyrics)),
-                            ])
-                    ),
-                ])
-        ),
+            (size: "70%", borders: "NONE", pane: Split(direction: Vertical,panes: [
+                (size: "3", borders: "ALL", pane: Component("custom_song_table_header")),
+                (size: "100%", borders: "ALL", pane: Pane(Queue)),
+            ])),
+            (size: "30%", borders: "ALL", pane: Pane(AlbumArt)),
+        ])),
         (name: "Directories", pane: Split(direction: Horizontal,panes: [
                     (size: "100%", borders: "ALL", pane: Pane(Directories)),
                 ])
@@ -166,15 +160,12 @@
                 ])
         ),
         (name: "Show",pane: Split(direction: Vertical, panes: [
-                    (size: "50%", pane: Split(direction: Horizontal, panes: [
-                                (size: "22%", borders: "ALL", pane: Pane(Queue)),
-                                (size: "56%", borders: "ALL", pane: Pane(Lyrics)),
-                                (size: "22%", borders: "ALL", pane: Pane(AlbumArt)),
-                            ])
-                    ),
-                    (size: "50%", borders: "ALL", pane: Pane(Cava)),
-                ])
-        ),
+            (size: "50%", pane: Split(direction: Horizontal, panes: [
+                (size: "50%", borders: "ALL", pane: Pane(Queue)),
+                (size: "50%", borders: "ALL", pane: Pane(AlbumArt)),
+            ])),
+            (size: "50%", borders: "ALL", pane: Pane(Cava)),
+        ])),
         (name: "Search", pane: Split(direction: Horizontal, panes: [
                     (size: "100%", borders: "ALL", pane: Pane(Search)),
                 ])
