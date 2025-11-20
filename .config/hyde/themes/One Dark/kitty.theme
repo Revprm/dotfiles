@@ -3,10 +3,10 @@ $HOME/.config/kitty/theme.conf|killall -SIGUSR1 kitty
 
 # The basic colors
 
-foreground              #979eab
+foreground              #abb2bf
 background              #282c34
 selection_foreground    #282c34
-selection_background    #979eab
+selection_background    #61afef
 
 # Cursor
 cursor                     none
@@ -14,18 +14,18 @@ cursor_blink_interval      -1
 cursor_stop_blinking_after 15.0
 
 # URL underline color when hovering with mouse
-url_color               #c678dd
+url_color               #61afef
 
-active_tab_foreground   #abb2bf
-active_tab_background   #282c34
+active_tab_foreground   #282c34
+active_tab_background   #61afef
 
-inactive_tab_foreground #979eab
-inactive_tab_background #1e222a
+inactive_tab_foreground #abb2bf
+inactive_tab_background #282c34
 
 tab_bar_edge bottom
 active_tab_font_style   bold
 tab_bar_style slant
-tab_bar_background #1e222a
+tab_bar_background #282c34
 
 # OS Window titlebar colors
 wayland_titlebar_color system
@@ -40,29 +40,28 @@ color8 #393e48
 
 # red
 color1 #e06c75
-color9 #d77c75
+color9 #e06c75
 
 # green
 color2  #98c379
-color10 #a8d386
+color10 #98c379
 
 # yellow
 color3  #e5c07b
-color11 #ddc985
+color11 #e5c07b
 
 # blue
 color4  #61afef
-color12 #6bb9e5
+color12 #61afef
 
 # magenta
 color5  #c678dd
-color13 #c691dd
+color13 #c678dd
 
 # cyan
-color6  #65b6c2
-color14 #65d2c2
+color6  #56b6c2
+color14 #56b6c2
 
 # white
-color7  #979eab
-color15 #abb2bf
-
+color7  #abb2bf
+color15 #ffffff

@@ -1,16 +1,1 @@
 /* User custom styles */
-#leaf,
-#leaf-inverse,
-#leaf-up,
-#leaf-down,
-#leaf-right,
-#leaf-left,
-#pill,
-#pill-right,
-#pill-left,
-#pill-down,
-#pill-up,
-#pill-in,
-#pill-out {
-    border: 1.5px solid @wb-act-bg;
-}
