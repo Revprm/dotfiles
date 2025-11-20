@@ -1,5 +1,5 @@
 $HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
-exec = gsettings set org.gnome.desktop.interface icon-theme 'One-Dark'
+exec = gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-black'
 exec = gsettings set org.gnome.desktop.interface gtk-theme 'One-Dark'
 exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
@@ -11,16 +11,16 @@ general {
     gaps_in = 12
     gaps_out = 18
     border_size = 2
-    col.active_border = rgba(61afefff)
+    col.active_border = rgba(88B3CBff)
     col.inactive_border = rgba(282c34aa)
     layout = dwindle
     resize_on_border = true
 }
 
 group {
-    col.border_active = rgba(61afefff)
+    col.border_active = rgba(88B3CBff)
     col.border_inactive = rgba(282c34aa)
-    col.border_locked_active = rgba(61afefff)
+    col.border_locked_active = rgba(88B3CBff)
     col.border_locked_inactive = rgba(282c34aa)
 }
 
@@ -32,7 +32,7 @@ decoration {
     shadow_offset = 0 2
     shadow_range = 10
     shadow_render_power = 3
-    col.shadow = rgba(00000055)
+    col.shadow = rgba(88B3CB33)
     col.shadow_inactive = rgba(00000022)
 
     blur {
@@ -45,4 +45,4 @@ decoration {
     }
 }
 
-layerrule = blur,waybar
+blurls = waybar

@@ -3,4 +3,4 @@
 # Updated config.toml file can be found at $HOME/.local/share/hyde/config.toml
 [hyprland]
 cursor_theme="onedark-cursor"
-icon_theme="One-Dark"
+icon_theme="Tela-circle-black"
