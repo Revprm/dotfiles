@@ -190,35 +190,35 @@ kitty +kitten themes
 <details open>
 <summary><b>🪟 Tiling Window Layout</b></summary>
 
-![tiling](images/251108_16h47m30s_screenshot.png)
+![tiling](images/251122_09h50m40s_screenshot.png)
 
 </details>
 
 <details>
 <summary><b>🎵 Music Player (RMPC)</b></summary>
 
-![rmpc](images/251108_16h45m01s_screenshot.png)
+![rmpc](images/251122_10h08m30s_screenshot.png)
 
 </details>
 
 <details>
 <summary><b>💬 Discord (Vesktop)</b></summary>
 
-![discord](images/251108_16h48m07s_screenshot.png)
+![discord](images/251122_09h53m28s_screenshot.png)
 
 </details>
 
 <details>
 <summary><b>🚀 Application Launcher (Rofi)</b></summary>
 
-![rofi](images/251108_16h48m32s_screenshot.png)
+![rofi](images/251122_09h52m46s_screenshot.png)
 
 </details>
 
 <details>
 <summary><b>🔒 Lock Screen</b></summary>
 
-![lock](images/251108_16h49m07s_screenshot.png)
+![lock](images/251122_09h52m09s_screenshot.png)
 
 </details>
 
