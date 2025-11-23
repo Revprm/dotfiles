@@ -48,7 +48,9 @@ fi
 export EDITOR=code
 export BROWSER=firefox
 
+alias osu-lazer='gamemoderun osu-lazer'
+alias osu-stable='gamemoderun osu-stable'
+
 # unset -f command_not_found_handler # Uncomment to prevent searching for commands not found in package manager
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
